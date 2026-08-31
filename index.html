@@ -121,6 +121,10 @@
         top: 0;
         transform: translateX(-50%);
       }
+      #top-hero-stage {
+        min-height: auto;
+      }
+     
     }
     .header,
     .footer {
@@ -288,7 +292,7 @@
           
     </div>
 
-  <section class="hero-stage">
+  <section class="hero-stage" id="top-hero-stage">
  
     <div class="hero-pair">
       <div class="float-bg" aria-hidden="true">
@@ -316,18 +320,32 @@
       <!-- contents -->
       <section class="stack">  
 
-        <section class="frame frame-feature" style="height: 400px; background-color: #ffccf2;"">
+ 
+
+          <section class="frame frame-feature1">
+            <iframe src="components/content_glass_white_adaptive.html" title="Featured content" loading="lazy" scrolling="no" style="overflow:hidden;"></iframe>
+        </section>
+
+        <section class="frame frame-feature" style="height: 400px; background-color: #c7c3be;">
             <iframe src="components/tabs.html" title="Discover" loading="lazy"></iframe>
           </section>
 
-          <section class="frame frame-feature1">
-            <iframe src="components/content_glass_white_adaptive.html" title="Featured content" loading="lazy"></iframe>
-        </section>
-
-        <section class="frame frame-feature2" style="height: 500px; background-color: #9c7800;">
+        <section class="frame frame-feature2" style="max-height: 500px; background-color: #9c7800;">
             <iframe src="components/notifications_adaptive.html" title="Featured content" loading="lazy"></iframe>
         </section>
 
+        <section class="frame frame-feature">
+            <iframe src="components/discover_now.html" title="Discover" loading="lazy"></iframe>
+          </section>
+
+
+        <section class="frame frame-feature" style="background-color: #c7c3be;"">
+            <iframe src="components/cell_animate.html" title="Cells" loading="lazy"></iframe>
+          </section>
+
+          <section class="frame frame-feature2" style="overflow: hidden;" >
+            <iframe src="components/contact_white_adaptive.html" title="contact" style="height: 1000px;" loading="lazy" scrolling="no" ></iframe>
+          </section>
 
           <!-- <section class="frame frame-feature" >
             <iframe src="components/border_animate.html" title="Discover" loading="lazy" style="position: absolute; margin: -750px auto 0; height: 900px;"></iframe>
