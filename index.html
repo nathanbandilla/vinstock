@@ -323,7 +323,7 @@
  
 
           <section class="frame frame-feature1">
-            <iframe id="content-glass-iframe" src="components/content_glass_white_adaptive.html" title="Featured content" loading="lazy" scrolling="no" style="overflow:hidden;"></iframe>
+            <iframe src="components/content_glass_white_adaptive.html" title="Featured content" loading="lazy" scrolling="no" style="overflow:hidden;"></iframe>
         </section>
 
         <section class="frame frame-feature" style="height: 400px; background-color: #c7c3be;">
@@ -344,7 +344,7 @@
           </section>
 
           <section class="frame frame-feature2" style="overflow: hidden;" >
-            <iframe id="contact-iframe" src="components/contact_white_adaptive.html" title="contact" style="height: 1000px;" loading="lazy" scrolling="no" ></iframe>
+            <iframe src="components/contact_white_adaptive.html" title="contact" loading="lazy" scrolling="no" ></iframe>
           </section>
 
           <!-- <section class="frame frame-feature" >
@@ -377,24 +377,8 @@
   </main>
 
   <footer class="footer">
-    <iframe src="components/hero_animate.html" title="Site footer" loading="lazy"></iframe>
+    <!-- <iframe src="components/hero_animate.html" title="Site footer" loading="lazy"></iframe> -->
   </footer>
 
-  <script>
-    // These two components render their own scrollbar even with scrolling="no",
-    // since modern browsers ignore that attribute. Since they're same-origin,
-    // we can reach into each iframe's own document once it loads and hide it there.
-    document.querySelectorAll('#content-glass-iframe, #contact-iframe').forEach(function (frame) {
-      frame.addEventListener('load', function () {
-        try {
-          var doc = frame.contentDocument || frame.contentWindow.document;
-          doc.documentElement.style.overflow = 'hidden';
-          doc.body.style.overflow = 'hidden';
-        } catch (e) {
-          // Cross-origin fallback: nothing we can do from the parent page.
-        }
-      });
-    });
-  </script>
 </body>
 </html>
