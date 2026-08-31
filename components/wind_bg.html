@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="vincta-download-purpose" content="design">
+<meta name="vincta-design-wrap" content="iframe">
+<meta name="vincta-design-width" content="800">
+<meta name="vincta-design-height" content="600">
+<meta name="vincta-content-width" content="800">
+<meta name="vincta-content-height" content="600">
+<title>Wind Stream Background</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:transparent;overflow:hidden;}
+.vincta-design-root{
+  width:100%;height:100%;min-height:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;box-sizing:border-box;
+}
+.vincta-design-viewport{
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+  
+}
+.vincta-design-shell{
+  position:absolute;left:0;top:0;
+  width:800px;height:600px;
+  transform-origin:0 0;
+}
+
+.vincta-design-shell>iframe{
+  display:block;width:800px;height:600px;
+  max-width:800px;max-height:600px;
+  border:0;overflow:hidden;box-sizing:border-box;background:transparent;
+}
+
+</style>
+</head>
+<body>
+<div class="vincta-design-root" id="vincta-design-root">
+  <div class="vincta-design-viewport" id="vincta-design-viewport">
+    <div class="vincta-design-shell" id="vincta-design-shell">
+      <iframe
+      title="Wind Stream Background"
+      width="800"
+      height="600"
+      scrolling="no"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<style id=&quot;embed-force-preview&quot;>.controls,#controlPanel{display:none !important;}html{margin:0;padding:0;}body{margin:0!important;padding:0!important;}</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;>
+<title>Vincta Wind Stream</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{margin:0;overflow:hidden;background:transparent}
+body{margin:0;overflow:hidden;background:transparent;width:1500px;height:660px;min-width:1500px;min-height:660px;display:flex;align-items:center;justify-content:center}
+body.is-responsive-frame{width:100vw;height:100vh;min-width:0;min-height:0}
+#export-stage{position:relative;width:1500px;height:660px;display:flex;align-items:center;justify-content:center;overflow:visible;background:transparent}
+body.is-responsive-frame #export-stage{width:100vw;height:100vh}
+#surface-scale{position:relative;width:var(--design-w);height:var(--design-h);min-width:var(--design-w);min-height:var(--design-h);max-width:var(--design-w);max-height:var(--design-h);transform-origin:var(--surface-origin);flex-shrink:0;overflow:visible;will-change:transform}
+#design-surface{position:relative;width:var(--design-w);height:var(--design-h);min-width:var(--design-w);min-height:var(--design-h);max-width:var(--design-w);max-height:var(--design-h);transform:none!important;transform-origin:var(--surface-origin);flex-shrink:0;overflow:hidden;background:transparent;contain:layout paint style}
+#design-surface.opaque #bg-color-layer{display:block}
+#bg-color-layer{position:absolute;inset:0;background:#fff;pointer-events:none;display:none}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block;transform-origin:center center;transform-box:fill-box;backface-visibility:hidden}
+</style>
+<script src=&quot;https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js&quot;></script>
+<script type=&quot;application/json&quot; id=&quot;vincta-html-embed-meta&quot;>{&quot;sourceHtmlId&quot;:&quot;&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;editSourceUrl&quot;:&quot;&quot;,&quot;htmlType&quot;:0,&quot;htmlSource&quot;:null,&quot;htmlTemplateId&quot;:null,&quot;width&quot;:1502,&quot;htmlDesignWidth&quot;:1502,&quot;height&quot;:662,&quot;htmlDesignHeight&quot;:662}</script>
+</head>
+<body class=&quot;tool-overlay&quot;>
+<div id=&quot;export-stage&quot;>
+  <div id=&quot;surface-scale&quot;>
+    <div id=&quot;design-surface&quot;>
+      <div id=&quot;bg-color-layer&quot;></div>
+      <canvas id=&quot;scene&quot; width=&quot;1500&quot; height=&quot;660&quot;></canvas>
+    </div>
+  </div>
+</div>
+<script id=&quot;vincta-template-params&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:1,&quot;componentType&quot;:&quot;vincta-wind-particles&quot;,&quot;designW&quot;:1500,&quot;designH&quot;:660,&quot;transparent&quot;:true,&quot;bgColor&quot;:&quot;#7e7272&quot;,&quot;minWind&quot;:0,&quot;maxWind&quot;:5,&quot;minSize&quot;:11,&quot;maxSize&quot;:57,&quot;emitterY&quot;:0.27,&quot;emitterSpread&quot;:1,&quot;gravity&quot;:0,&quot;turbulence&quot;:0,&quot;rotationSpeed&quot;:0,&quot;staticTilt&quot;:0,&quot;tumbleStrength&quot;:0.4,&quot;particleCount&quot;:150,&quot;imageSources&quot;:[]}</script>
+<script>
+(function(){
+  var rawParams = document.getElementById(&quot;vincta-template-params&quot;);
+  var P = {};
+  try { P = JSON.parse(rawParams.textContent || &quot;{}&quot;); } catch(e) { P = {}; }
+  function stripTags(input){ var s = String(input || &quot;&quot;); var out = &quot;&quot;; var inTag = false; for(var i=0;i<s.length;i++){ var ch = s.charAt(i); if(ch === &quot;<&quot;){ inTag = true; continue; } if(ch === &quot;>&quot;){ inTag = false; continue; } if(!inTag) out += ch; } return out; }
+  function sanitizeText(input){ if(window.DOMPurify &amp;&amp; typeof window.DOMPurify.sanitize === &quot;function&quot;){ return window.DOMPurify.sanitize(String(input || &quot;&quot;), {ALLOWED_TAGS: [], ALLOWED_ATTR: []}); } return stripTags(String(input || &quot;&quot;)); }
+  function safeColor(input, fallback){ var v = sanitizeText(input).trim(); return /^#[0-9a-f]{6}$/i.test(v) ? v : fallback; }
+  function sanitizeSvgDataUrl(raw){ var src = String(raw || &quot;&quot;).trim(); var comma = src.indexOf(&quot;,&quot;); if(comma < 0) return &quot;&quot;; var meta = src.slice(0, comma).toLowerCase(); var payload = src.slice(comma + 1); var svg = &quot;&quot;; try { svg = meta.indexOf(&quot;;base64&quot;) > -1 ? atob(payload) : decodeURIComponent(payload); } catch(e){ return &quot;&quot;; } if(window.DOMPurify &amp;&amp; typeof window.DOMPurify.sanitize === &quot;function&quot;){ svg = window.DOMPurify.sanitize(svg, {USE_PROFILES:{svg:true, svgFilters:true}, FORBID_TAGS:[&quot;script&quot;,&quot;foreignObject&quot;,&quot;iframe&quot;,&quot;object&quot;,&quot;embed&quot;], FORBID_ATTR:[&quot;onerror&quot;,&quot;onload&quot;,&quot;onclick&quot;,&quot;onmouseover&quot;,&quot;onfocus&quot;,&quot;onblur&quot;,&quot;onchange&quot;,&quot;oninput&quot;], ALLOW_DATA_ATTR:false}); } var low = svg.toLowerCase(); if(!svg || low.indexOf(&quot;<script&quot;) > -1 || low.indexOf(&quot;foreignobject&quot;) > -1 || low.indexOf(&quot;javascript:&quot;) > -1 || low.indexOf(&quot;vbscript:&quot;) > -1 || low.indexOf(&quot;onload=&quot;) > -1 || low.indexOf(&quot;onerror=&quot;) > -1 || low.indexOf(&quot;onclick=&quot;) > -1 || low.indexOf(&quot;onmouseover=&quot;) > -1 || low.indexOf(&quot;onfocus=&quot;) > -1 || low.indexOf(&quot;onblur=&quot;) > -1) return &quot;&quot;; return &quot;data:image/svg+xml;charset=utf-8,&quot; + encodeURIComponent(svg); }
+  function hasControlChars(value){ for(var i=0;i<value.length;i++){ var c=value.charCodeAt(i); if(c < 32 || c === 127) return true; } return false; }
+  function compact(value){ var s = String(value || &quot;&quot;); var out = &quot;&quot;; for(var i=0;i<s.length;i++){ var code=s.charCodeAt(i); if(code > 32 &amp;&amp; code !== 127) out += s.charAt(i).toLowerCase(); } return out; }
+  function safeImageSrc(input){ var raw = String(input || &quot;&quot;).trim(); if(!raw || hasControlChars(raw)) return &quot;&quot;; var low = raw.toLowerCase(); var c = compact(raw); if(c.indexOf(&quot;javascript:&quot;) === 0 || c.indexOf(&quot;vbscript:&quot;) === 0 || c.indexOf(&quot;file:&quot;) === 0) return &quot;&quot;; if(c.indexOf(&quot;data:text/html&quot;) === 0 || c.indexOf(&quot;data:application/javascript&quot;) === 0 || c.indexOf(&quot;data:application/x-javascript&quot;) === 0 || c.indexOf(&quot;data:application/html&quot;) === 0 || c.indexOf(&quot;data:application/xml&quot;) === 0) return &quot;&quot;; if(low.indexOf(&quot;data:image/svg+xml&quot;) === 0) return sanitizeSvgDataUrl(raw); if((low.indexOf(&quot;data:image/png&quot;) === 0 || low.indexOf(&quot;data:image/jpeg&quot;) === 0 || low.indexOf(&quot;data:image/jpg&quot;) === 0 || low.indexOf(&quot;data:image/gif&quot;) === 0 || low.indexOf(&quot;data:image/webp&quot;) === 0) &amp;&amp; low.indexOf(&quot;;base64,&quot;) > -1) return raw; if(low.indexOf(&quot;blob:&quot;) === 0) return raw; if(low.indexOf(&quot;https://&quot;) === 0 || low.indexOf(&quot;http://&quot;) === 0){ try { var u = new URL(raw, window.location.href); return (u.protocol === &quot;https:&quot; || u.protocol === &quot;http:&quot;) ? u.href : &quot;&quot;; } catch(e){ return &quot;&quot;; } } return &quot;&quot;; }
+  P.bgColor = safeColor(P.bgColor, &quot;#ffffff&quot;);
+  P.imageSources = Array.isArray(P.imageSources) ? P.imageSources.map(safeImageSrc).filter(Boolean) : [];
+  var DESIGN_W = 1500;
+  var DESIGN_H = 660;
+  var SURFACE_ORIGIN = &quot;center center&quot;;
+  var stage = document.getElementById(&quot;export-stage&quot;);
+  var scaler = document.getElementById(&quot;surface-scale&quot;);
+  var surf = document.getElementById(&quot;design-surface&quot;);
+  surf.style.setProperty(&quot;--design-w&quot;, DESIGN_W + &quot;px&quot;);
+  surf.style.setProperty(&quot;--design-h&quot;, DESIGN_H + &quot;px&quot;);
+  surf.style.setProperty(&quot;--surface-origin&quot;, SURFACE_ORIGIN);
+  surf.style.width = DESIGN_W + &quot;px&quot;;
+  surf.style.height = DESIGN_H + &quot;px&quot;;
+  surf.style.minWidth = DESIGN_W + &quot;px&quot;;
+  surf.style.minHeight = DESIGN_H + &quot;px&quot;;
+  surf.style.maxWidth = DESIGN_W + &quot;px&quot;;
+  surf.style.maxHeight = DESIGN_H + &quot;px&quot;;
+  surf.style.transformOrigin = SURFACE_ORIGIN;
+  surf.style.transform = &quot;none&quot;;
+  scaler.style.setProperty(&quot;--design-w&quot;, DESIGN_W + &quot;px&quot;);
+  scaler.style.setProperty(&quot;--design-h&quot;, DESIGN_H + &quot;px&quot;);
+  scaler.style.setProperty(&quot;--surface-origin&quot;, SURFACE_ORIGIN);
+  scaler.style.width = DESIGN_W + &quot;px&quot;;
+  scaler.style.height = DESIGN_H + &quot;px&quot;;
+  scaler.style.minWidth = DESIGN_W + &quot;px&quot;;
+  scaler.style.minHeight = DESIGN_H + &quot;px&quot;;
+  scaler.style.maxWidth = DESIGN_W + &quot;px&quot;;
+  scaler.style.maxHeight = DESIGN_H + &quot;px&quot;;
+  scaler.style.transformOrigin = SURFACE_ORIGIN;
+  if (P.transparent) {
+    surf.classList.remove(&quot;opaque&quot;);
+  } else {
+    surf.classList.add(&quot;opaque&quot;);
+    document.getElementById(&quot;bg-color-layer&quot;).style.background = P.bgColor || &quot;#ffffff&quot;;
+  }
+  function viewportSize(){ return { w: window.innerWidth || document.documentElement.clientWidth || DESIGN_W, h: window.innerHeight || document.documentElement.clientHeight || DESIGN_H }; }
+  function fit(){
+    var v = viewportSize();
+    var upScale = Math.min(v.w / DESIGN_W, v.h / DESIGN_H);
+    var scale = (isFinite(upScale) &amp;&amp; upScale > 1) ? upScale : 1;
+    var responsive = scale > 1.0001;
+    document.body.classList.toggle(&quot;is-responsive-frame&quot;, responsive);
+    stage.style.width = responsive ? &quot;100vw&quot; : DESIGN_W + &quot;px&quot;;
+    stage.style.height = responsive ? &quot;100vh&quot; : DESIGN_H + &quot;px&quot;;
+    surf.style.transform = &quot;none&quot;;
+    scaler.style.transformOrigin = SURFACE_ORIGIN;
+    scaler.style.transform = &quot;scale(&quot; + scale + &quot;)&quot;;
+  }
+  fit();
+  window.addEventListener(&quot;resize&quot;, fit);
+  window.addEventListener(&quot;load&quot;, fit);
+  var settings = {
+    transparent: !!P.transparent,
+    bgColor: P.bgColor || &quot;#ffffff&quot;,
+    minWind: +P.minWind || 0,
+    maxWind: +P.maxWind || 0,
+    minSize: +P.minSize || 16,
+    maxSize: +P.maxSize || 57,
+    emitterY: +P.emitterY || 0.4,
+    emitterSpread: +P.emitterSpread || 0.35,
+    gravity: +P.gravity || 0,
+    turbulence: +P.turbulence || 0,
+    rotationSpeed: +P.rotationSpeed || 0,
+    staticTilt: +P.staticTilt || 0,
+    tumbleStrength: +P.tumbleStrength || 0,
+    particleCount: (P.particleCount | 0) || 100
+  };
+  var ENGINE_SOURCE = &quot;\nreturn (function(rootEl, opts){\n  var canvas = rootEl.querySelector('canvas');\n  if (!canvas) return null;\n  var ctx = canvas.getContext('2d');\n  var DESIGN_W = opts.designW || 1500;\n  var DESIGN_H = opts.designH || 660;\n  canvas.width = DESIGN_W;\n  canvas.height = DESIGN_H;\n  var width = DESIGN_W, height = DESIGN_H;\n\n  function resizeCanvasToDesign(){\n    DESIGN_W = opts.designW || DESIGN_W;\n    DESIGN_H = opts.designH || DESIGN_H;\n    canvas.width = DESIGN_W;\n    canvas.height = DESIGN_H;\n    canvas.style.width = DESIGN_W + 'px';\n    canvas.style.height = DESIGN_H + 'px';\n    width = DESIGN_W;\n    height = DESIGN_H;\n  }\n  resizeCanvasToDesign();\n\n  var settings = opts.settings;\n  var loadedImages = [];\n\n  function createDefaultImage() {\n    var c = document.createElement('canvas');\n    c.width = 128; c.height = 128;\n    var t = c.getContext('2d');\n    t.scale(2, 2);\n    t.beginPath();\n    t.moveTo(32, 5);\n    t.quadraticCurveTo(5, 32, 32, 59);\n    t.quadraticCurveTo(59, 32, 32, 5);\n    t.fillStyle = '#e67e22'; t.fill();\n    t.strokeStyle = '#d35400'; t.lineWidth = 2; t.stroke();\n    t.beginPath();\n    t.moveTo(32, 5); t.lineTo(32, 59); t.stroke();\n    var img = new Image();\n    img.src = c.toDataURL();\n    img.__isDefault = true;\n    return img;\n  }\n\n  function loadImagesFromSources(srcArr, cb) {\n    if (!srcArr || srcArr.length === 0) {\n      loadedImages = [createDefaultImage()];\n      // Wait briefly for the default to decode\n      setTimeout(cb, 50);\n      return;\n    }\n    var out = [];\n    var done = 0;\n    srcArr.forEach(function(src, i){\n      var img = new Image();\n      img.crossOrigin = 'anonymous';\n      img.onload = function(){\n        done++;\n        if (done === srcArr.length) { loadedImages = out.filter(Boolean); cb(); }\n      };\n      img.onerror = function(){\n        done++;\n        if (done === srcArr.length) { loadedImages = out.filter(Boolean); cb(); }\n      };\n      img.src = src;\n      out[i] = img;\n    });\n  }\n\n  function rotateVector(x, y, z, ax, ay, az) {\n    var cos = Math.cos(az), sin = Math.sin(az);\n    var x1 = x * cos - y * sin, y1 = x * sin + y * cos, z1 = z;\n    cos = Math.cos(ay); sin = Math.sin(ay);\n    var x2 = x1 * cos + z1 * sin, y2 = y1, z2 = -x1 * sin + z1 * cos;\n    cos = Math.cos(ax); sin = Math.sin(ax);\n    return { x: x2, y: y2 * cos - z2 * sin, z: y2 * sin + z2 * cos };\n  }\n\n  function Particle(initOnScreen) { this.reset(initOnScreen); }\n  Particle.prototype.reset = function(initOnScreen) {\n    this.image = loadedImages[Math.floor(Math.random() * loadedImages.length)] || loadedImages[0];\n    var minS = Math.min(settings.minSize, settings.maxSize);\n    var maxS = Math.max(settings.minSize, settings.maxSize);\n    this.width = minS + Math.random() * (maxS - minS);\n    if (this.image &amp;&amp; this.image.width &amp;&amp; this.image.height) {\n      this.height = this.width * (this.image.height / this.image.width);\n    } else {\n      this.height = this.width;\n    }\n    var centerY = height * settings.emitterY;\n    var spreadHeight = height * settings.emitterSpread;\n    var minY = centerY - (spreadHeight / 2);\n    var maxY = centerY + (spreadHeight / 2);\n    this.y = minY + Math.random() * (maxY - minY);\n    this.x = initOnScreen ? Math.random() * width : -this.width - (Math.random() * 200);\n    var sizeFactor = (this.width - minS) / (maxS - minS || 1);\n    this.windFactor = 1.0 - (sizeFactor * 0.5 + Math.random() * 0.5);\n    this.windFactor = Math.max(0.1, Math.min(1, this.windFactor));\n    this.vx = 0; this.vy = 0;\n    this.waveOffset = Math.random() * Math.PI * 2;\n    this.angleZ = Math.random() * 360;\n    this.spinZ = (Math.random() - 0.5) * settings.rotationSpeed;\n    this.angleX = 0; this.angleY = 0;\n    this.spinX = (Math.random() - 0.5) * 0.1;\n    this.spinY = (Math.random() - 0.5) * 0.1;\n  };\n  Particle.prototype.update = function() {\n    var realMin = Math.min(settings.minWind, settings.maxWind);\n    var realMax = Math.max(settings.minWind, settings.maxWind);\n    var targetSpeed = realMin + (realMax - realMin) * this.windFactor;\n    this.vx += (targetSpeed - this.vx) * 0.1;\n    this.x += this.vx;\n    var gravityMod = 1.5 - this.windFactor;\n    this.vy += settings.gravity * 0.05 * gravityMod;\n    var wave = Math.sin(this.x * 0.01 + this.waveOffset);\n    this.vy += wave * (settings.turbulence * 0.05);\n    this.vy *= 0.98;\n    this.y += this.vy;\n    this.angleZ += this.spinZ + (this.vx * 0.002);\n    if (settings.tumbleStrength > 0) {\n      this.angleX += this.spinX * settings.tumbleStrength;\n      this.angleY += this.spinY * settings.tumbleStrength;\n    }\n    var buffer = Math.max(220, width * 0.18);\n    if (this.x > width + buffer || this.y > height + buffer || this.y \u003c -buffer) {\n      this.reset(false);\n    }\n  };\n  Particle.prototype.draw = function() {\n    if (!this.image || !this.image.complete) return;\n\n    var tiltRad = (settings.staticTilt * Math.PI) / 180;\n    var radZ = this.angleZ;\n    var vecU = rotateVector(1, 0, 0, this.angleX, this.angleY + tiltRad, radZ);\n    var vecV = rotateVector(0, 1, 0, this.angleX, this.angleY + tiltRad, radZ);\n\n    ctx.save();\n    // Center-origin transform: translate to particle center first, then rotate/tumble around 0,0.\n    ctx.translate(this.x, this.y);\n    ctx.transform(vecU.x, vecU.y, vecV.x, vecV.y, 0, 0);\n    ctx.drawImage(this.image, -this.width / 2, -this.height / 2, this.width, this.height);\n    ctx.restore();\n  };\n\n  var particles = [];\n  function initParticles() {\n    particles = [];\n    for (var i = 0; i \u003c settings.particleCount; i++) {\n      particles.push(new Particle(true));\n    }\n  }\n  function adjustParticleCount() {\n    var diff = settings.particleCount - particles.length;\n    if (diff > 0) {\n      for (var i = 0; i \u003c diff; i++) particles.push(new Particle(true));\n    } else if (diff \u003c 0) {\n      particles.splice(0, Math.abs(diff));\n    }\n  }\n\n  var rafId = null;\n  function animate() {\n    if (settings.transparent) {\n      ctx.clearRect(0, 0, width, height);\n    } else {\n      ctx.fillStyle = settings.bgColor;\n      ctx.fillRect(0, 0, width, height);\n    }\n    for (var i = 0; i \u003c particles.length; i++) {\n      particles[i].update();\n      particles[i].draw();\n    }\n    rafId = requestAnimationFrame(animate);\n  }\n\n  ctx.imageSmoothingEnabled = true;\n  ctx.imageSmoothingQuality = 'high';\n\n  loadImagesFromSources(opts.imageSources || [], function(){\n    initParticles();\n    if (rafId) cancelAnimationFrame(rafId);\n    animate();\n  });\n\n  // Re-bake the parts of particle state that reset() picks from settings.\n  // Used when settings that are \&quot;frozen at reset time\&quot; change (size range,\n  // emitter band, 2D spin random magnitude). Keeps current X so the stream\n  // does not visibly snap to the left.\n  function rebakeFromSettings(fields) {\n    var minS = Math.min(settings.minSize, settings.maxSize);\n    var maxS = Math.max(settings.minSize, settings.maxSize);\n    for (var i = 0; i \u003c particles.length; i++) {\n      var p = particles[i];\n      if (fields.size) {\n        p.width = minS + Math.random() * (maxS - minS);\n        if (p.image &amp;&amp; p.image.width &amp;&amp; p.image.height) {\n          p.height = p.width * (p.image.height / p.image.width);\n        } else {\n          p.height = p.width;\n        }\n        var sizeFactor = (p.width - minS) / (maxS - minS || 1);\n        p.windFactor = 1.0 - (sizeFactor * 0.5 + Math.random() * 0.5);\n        p.windFactor = Math.max(0.1, Math.min(1, p.windFactor));\n      }\n      if (fields.band) {\n        var centerY = height * settings.emitterY;\n        var spreadHeight = height * settings.emitterSpread;\n        var minY = centerY - (spreadHeight / 2);\n        var maxY = centerY + (spreadHeight / 2);\n        p.y = minY + Math.random() * (maxY - minY);\n        p.vy = 0;\n      }\n      if (fields.spin) {\n        p.spinZ = (Math.random() - 0.5) * settings.rotationSpeed;\n      }\n    }\n  }\n\n  return {\n    setSettings: function(next) {\n      var prev = {\n        particleCount: settings.particleCount,\n        minSize: settings.minSize,\n        maxSize: settings.maxSize,\n        emitterY: settings.emitterY,\n        emitterSpread: settings.emitterSpread,\n        rotationSpeed: settings.rotationSpeed\n      };\n      Object.keys(next).forEach(function(k){ settings[k] = next[k]; });\n      if (settings.particleCount !== prev.particleCount) adjustParticleCount();\n      var fields = {\n        size: settings.minSize !== prev.minSize || settings.maxSize !== prev.maxSize,\n        band: settings.emitterY !== prev.emitterY || settings.emitterSpread !== prev.emitterSpread,\n        spin: settings.rotationSpeed !== prev.rotationSpeed\n      };\n      if (fields.size || fields.band || fields.spin) rebakeFromSettings(fields);\n    },\n    setImages: function(srcArr) {\n      loadImagesFromSources(srcArr || [], function(){\n        for (var i = 0; i \u003c particles.length; i++) particles[i].reset(true);\n      });\n    },\n    stop: function() {\n      if (rafId) cancelAnimationFrame(rafId);\n      rafId = null;\n    }\n  };\n})(__ROOT__, __OPTS__);\n&quot;;
+  var fn = new Function(&quot;__ROOT__&quot;, &quot;__OPTS__&quot;, ENGINE_SOURCE);
+  fn(surf, { designW: DESIGN_W, designH: DESIGN_H, imageSources: P.imageSources || [], settings: settings });
+})();
+</script>
+<script id=&quot;embed-fit-design-uniform&quot;>(function(){
+      var DW = 800, DH = 600;
+      var MAX_SCALE = 10;
+      function applyFit() {
+        try {
+          var doc = document;
+          var root = doc.documentElement;
+          var body = doc.body;
+          if (!body) return;
+          /* clientWidth/Height 与 iframe 内容区一致；innerWidth 偶发含亚像素误差，缩到很小时易底部/右侧被裁 1px */
+          var cw = (root &amp;&amp; root.clientWidth) || window.innerWidth || 0;
+          var ch = (root &amp;&amp; root.clientHeight) || window.innerHeight || 0;
+          if (cw < 10 || ch < 10) {
+            setTimeout(applyFit, 0);
+            return;
+          }
+          root.style.overflow = 'hidden';
+          root.style.height = '100%';
+          root.style.margin = '0';
+          root.style.padding = '0';
+          body.style.margin = '0';
+          body.style.padding = '0';
+          body.style.display = 'block';
+          body.style.alignItems = '';
+          body.style.justifyContent = '';
+          body.style.flexDirection = '';
+          /* 光晕/shadow 会画出 body 盒外；visible 让绘制不被 body 裁掉，由 html 与 iframe 视口收口 */
+          body.style.overflow = 'visible';
+          body.style.boxSizing = 'border-box';
+          body.style.position = 'absolute';
+          body.style.transformOrigin = '0 0';
+          body.style.width = DW + 'px';
+          body.style.height = DH + 'px';
+          var bw = Math.max(DW, body.scrollWidth, root.scrollWidth);
+          var bh = Math.max(DH, body.scrollHeight, root.scrollHeight);
+          body.style.width = bw + 'px';
+          body.style.height = bh + 'px';
+          var slack = 0;
+          var fitW = bw + slack;
+          var fitH = bh + slack;
+          var pad = 0;
+          var s = Math.min((cw - pad) / fitW, (ch - pad) / fitH);
+          if (!isFinite(s) || s <= 0) s = 1;
+          if (s > MAX_SCALE) s = MAX_SCALE;
+          body.style.transform = 'scale(' + s + ')';
+          body.style.left = Math.max(0, (cw - fitW * s) / 2) + 'px';
+          body.style.top = Math.max(0, (ch - fitH * s) / 2) + 'px';
+        } catch (e) {}
+      }
+      function runWhenReady() {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', runWhenReady);
+          return;
+        }
+        applyFit();
+        setTimeout(applyFit, 0);
+        setTimeout(applyFit, 150);
+        setTimeout(applyFit, 400);
+        setTimeout(applyFit, 800);
+      }
+      runWhenReady();
+      window.addEventListener('resize', applyFit);
+    })();</script>
+</body>
+</html>"
+    ></iframe>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DW = 800;
+  var DH = 600;
+  var root = document.getElementById('vincta-design-root');
+  var viewport = document.getElementById('vincta-design-viewport');
+  var shell = document.getElementById('vincta-design-shell');
+  if (!root || !viewport || !shell || !(DW > 0) || !(DH > 0)) return;
+
+  function fit() {
+    var rw = root.clientWidth || 0;
+    var rh = root.clientHeight || 0;
+    var s = 1;
+    if (rw > 0 && rh > 0) {
+      s = Math.max(rw / DW, rh / DH);
+    } else if (rw > 0) {
+      s = rw / DW;
+    } else if (rh > 0) {
+      s = rh / DH;
+    }
+    if (!isFinite(s) || s <= 0) s = 1;
+    viewport.style.width = (DW * s) + 'px';
+    viewport.style.height = (DH * s) + 'px';
+    shell.style.transform = 'scale(' + s + ')';
+  }
+
+  if (typeof ResizeObserver !== 'undefined') {
+    try {
+      new ResizeObserver(fit).observe(root);
+    } catch (e) {}
+  }
+  window.addEventListener('resize', fit);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit);
+  } else {
+    fit();
+  }
+})();
+</script>
+</body>
+</html>

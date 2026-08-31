@@ -12,11 +12,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap">
   <style>
     :root {
-      --bg: #0b0b0c;
-      --panel: #141416;
+      --bg: transparent;      
+      --panel: #eaece3;
+      --lightpanel: #fff8ef;
       --border: #2a2a2e;
-      --text: #f4f4f5;
-      --muted: #a1a1aa;
+      --text: #363636;
+      --muted: #686868;
+      --feature1: #4e1445;
+      --feature2: #bb00ab;
+      --feature3: #d1d400;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -24,42 +28,233 @@
       background: var(--bg);
       color: var(--text);
       font-family: system-ui, sans-serif;
+      overflow-x: hidden;
     }
-    header, footer {
-      max-width: 1200px;
+    .hero-stage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow: visible;
+    }
+    .hero-pair {
+      position: relative;
+      width: 100%;
+    }
+    .float-bg {
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      top: 0;
+      width: 100vw;
+      max-width: none;
+      height: 100%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .float-bg iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .float-bg2 {
+      position: absolute;
+      z-index: 0;
+     
+      top: 0;
+      width: 100vw;
+      max-width: none;
+      height: 100%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .float-bg2 iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .music-hero {
+      position: relative;
+      z-index: 1;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 16px;
     }
-    header.frame, footer.frame { margin: 16px auto; }
+    .tab {
+        background: var(--feature3);
+    }
+    .hero-stage > .hero,
+    .hero-pair > .hero,
+    .hero-stage > .stack {
+      position: relative;
+      z-index: 10;
+    }
+    .hero-stage .frame.hero {
+      background: transparent;
+      border: 0;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    .hero-stage .frame.hero iframe {
+      height: auto;
+      aspect-ratio: 3 / 2;
+    }
+    @media (max-width: 800px) {
+      .float-bg {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+      .float-bg2 {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+    }
+    .header,
+    .footer {
+      height: 200px;
+      margin: 0 auto;
+      padding: 0;
+      background: var(--lightpanel);
+    }
+    .header iframe,
+    .footer iframe {
+      width: 100%;
+      height: 100%;
+    }
+  
     main {
-      max-width: 1200px;
+      position: relative;
+      width: 100%;
+      max-width: none;
       margin: 0 auto;
-      padding: 24px 16px 48px;
+      padding: 80px 0 80px;
+    }
+    main .hero-stage {
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+    main .hero-stage > .stack {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto 20px;
+      padding: 0;
+    }
+    main .hero-stage > .stack:last-child {
+      margin-bottom: 0;
     }
     h1 {
-      font-size: 1.25rem;
+      font-size: 40px;
       font-weight: 650;
       margin: 0 0 8px;
+      padding: 50px;
+      color: var(--muted);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 200;
+      margin: 0 0 8px;
+      color: var(--muted);
     }
     p {
       color: var(--muted);
       margin: 0 0 24px;
       line-height: 1.5;
     }
-    .stack { display: grid; gap: 20px; }
+    .stack { 
+        display: grid; 
+        gap: 80px;        
+    }
     .row {
       display: grid;
       gap: 20px;
       grid-template-columns: 1fr 1fr;
-    }
+    }  
     @media (max-width: 800px) {
       .row { grid-template-columns: 1fr; }
     }
-    .frame {
-      background: var(--panel);
+    .frame {     
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 40px;
       overflow: hidden;
+      background: var(--panel); 
+    }
+    .frame-feature {
+      width: 100%;
+      max-width: 1440px; 
+      background: transparent;
+      border: 0;
+      overflow: hidden;
+    }
+    .frame-feature iframe {
+      width: 100%;
+      height: auto;
+      /* position: absolute; */
+      min-height: 50vh;
+      min-height: 50dvh;
+      /* margin: -50px auto 0; */
+      /* position: relative; */
+      /* z-index: 11;     */
+      
+    }
+    .frame-feature1 {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--feature1);
+      border: 0;
+      overflow: hidden;
+    }
+    .frame-feature1 iframe {
+      width: 100%;
+      height: auto;
+      min-height: 170vh;
+      min-height: 170dvh;
+    
+    }
+    @media (max-width: 1440px) {
+      .frame-feature1 {
+        max-width: 100%;
+      }
+      .frame-feature1 iframe {
+        min-height: 170vh;
+        min-height: 170dvh;
+      }
+    }
+    .frame-feature2 {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--feature2);
+      border: 0;
+      overflow: hidden;
+    }
+    .frame-feature2 iframe {
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+      min-height: 100dvh;      
+    }
+    @media (max-width: 1440px) {
+      .frame-feature2 {
+        max-width: 100%;
+      }
+      .frame-feature2 iframe {
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
     }
     .frame h2 {
       margin: 0;
@@ -71,61 +266,100 @@
     }
     iframe {
       display: block;
-      width: 100%;
+      width: 100%;     
       border: 0;
       background: transparent;
     }
-    .hero iframe { height: min(70vh, 560px); }
-    .logo iframe { height: 280px; }
-    .badge iframe { height: 360px; }
+    /* .hero iframe { height: 100vh; } */
+    /* .logo iframe { height: 280px; } */
+    /* .badge iframe { height: 360px; } */
   </style>
 </head>
 
 <body>
-  <header class="frame logo">
-    <!-- Header -->
-    <iframe src="components/tab_white_adaptive.html" title="Site header" loading="eager"></iframe>
-  </header>
+    <header class="header">
+        <iframe src="components/logo.html" title="Vinstock Music" loading="eager"></iframe>
+    </header>
 
-  <main>
-    <div style="text-align:center;">        
-        <h1>VINSTOCK MUSIC</h1>
-         <p>Each block loads its own HTML file. Do not paste Vincta srcdoc into a script tag — a nested <code>&lt;/script&gt;</code> 
-        will break the page.</p>
-    </div>    
+    <div style="text-align: center; font-style: italic;">  
+         
+        <h1>"You bring the idea.
+            We bring the sound."</h1>
+          
+    </div>
 
-    <div class="stack">
-      <section class="frame hero">
-        <!-- <h2>HEROC</h2> -->
-        <iframe src="components/hero_animate.html" width="100%" title="Hero animation" loading="eager"></iframe>
-      </section>
-
-      <div class="row">
-        <section class="frame logo">
-          <!-- <h2>Logo</h2> -->
-          <iframe src="Coach_Vin_Logo.html" title="Coach Vin logo" loading="lazy"></iframe>
-        </section>
-        <section class="frame badge">
-          <!-- <h2>Enroll</h2> -->
-          <iframe src="Enroll_Badge_glow.html" title="Enroll now badge" loading="lazy"></iframe>
-        </section>
+  <section class="hero-stage">
+ 
+    <div class="hero-pair">
+      <div class="float-bg" aria-hidden="true">
+        <iframe src="components/wind_bg.html" title="Animated background" loading="lazy"></iframe>
       </div>
-
-      <section class="frame hero">
-        <!-- <h2>Featured clip</h2> -->
-        <iframe src="components/hero_animate.html" title="Featured clip" loading="lazy"></iframe>
-      </section>
-
-      <section class="frame badge">
-        <!-- <h2>Call to action</h2> -->
-        <iframe src="Enroll_Badge_glow.html" title="Call to action" loading="lazy"></iframe>
+      <section class="frame hero music-hero">
+        <iframe src="components/music_hero.html" title="Music hero" loading="lazy"></iframe>
       </section>
     </div>
+
+    <!-- <section class="frame hero tab">
+      <iframe src="components/tab_black_adaptive.html" title="Site tabs" loading="lazy"></iframe>
+    </section> -->
+
+  </section>
+
+
+  <main>
+    <div class="hero-stage">
+
+      <div class="float-bg2" aria-hidden="true" style=" transform: scaleX(-1);">
+        <iframe src="components/wind_bg.html" title="Section background" loading="lazy"></iframe>
+      </div> 
+        
+      <!-- contents -->
+      <section class="stack">  
+
+        <section class="frame frame-feature" style="height: 400px; background-color: #ffccf2;"">
+            <iframe src="components/tabs.html" title="Discover" loading="lazy"></iframe>
+          </section>
+
+          <section class="frame frame-feature1">
+            <iframe src="components/content_glass_white_adaptive.html" title="Featured content" loading="lazy"></iframe>
+        </section>
+
+        <section class="frame frame-feature2" style="height: 500px; background-color: #9c7800;">
+            <iframe src="components/notifications_adaptive.html" title="Featured content" loading="lazy"></iframe>
+        </section>
+
+
+          <!-- <section class="frame frame-feature" >
+            <iframe src="components/border_animate.html" title="Discover" loading="lazy" style="position: absolute; margin: -750px auto 0; height: 900px;"></iframe>
+          </section> -->
+
+
+          
+        <!-- <div class="row">  
+
+            <section class="frame">
+                <iframe src="Enroll_Badge_glow.html" title="Enroll now badge" loading="lazy"></iframe>
+              </section>        
+
+            <section class="frame">
+              <iframe src="Enroll_Badge_glow.html" title="Enroll now badge" loading="lazy"></iframe>
+            </section>
+
+        </div> -->
+   
+     
+ 
+   
+      </section>
+
+
+    </div>
+
+    
   </main>
 
-  <footer class="frame badge">
-    <!-- <h2>Footer</h2> -->
-    <iframe src="Enroll_Badge_glow.html" title="Site footer" loading="lazy"></iframe>
+  <footer class="footer">
+    <iframe src="components/hero_animate.html" title="Site footer" loading="lazy"></iframe>
   </footer>
 </body>
 </html>
