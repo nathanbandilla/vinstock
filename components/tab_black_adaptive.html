@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="vincta-download-purpose" content="design">
+<meta name="vincta-design-wrap" content="iframe">
+<meta name="vincta-design-width" content="750">
+<meta name="vincta-design-height" content="500">
+<meta name="vincta-content-width" content="750">
+<meta name="vincta-content-height" content="500">
+<title>Tabs Section Glass</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:transparent;overflow:hidden;}
+.vincta-design-root{
+  width:100%;height:100%;min-height:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;box-sizing:border-box;
+}
+.vincta-design-viewport{
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+  
+}
+.vincta-design-shell{
+  position:absolute;left:0;top:0;
+  width:750px;height:500px;
+  transform-origin:0 0;
+}
+
+.vincta-design-shell>iframe{
+  display:block;width:750px;height:500px;
+  max-width:750px;max-height:500px;
+  border:0;overflow:hidden;box-sizing:border-box;background:transparent;
+}
+
+</style>
+</head>
+<body>
+<div class="vincta-design-root" id="vincta-design-root">
+  <div class="vincta-design-viewport" id="vincta-design-viewport">
+    <div class="vincta-design-shell" id="vincta-design-shell">
+      <iframe
+      title="Tabs Section Glass"
+      width="750"
+      height="500"
+      scrolling="no"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<style id=&quot;embed-force-preview&quot;>.controls,#controlPanel{display:none !important;}html{margin:0;padding:0;}body{margin:0!important;padding:0!important;}</style>
+  <meta charset=&quot;UTF-8&quot;>
+  <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+  <title>Glass Tabs</title>
+  <style>
+    :root{--design-w:750px;--design-h:500px;--surface-origin:center center;--surface-scale:1}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:transparent!important}
+    body{display:block;background:transparent}
+    #vincta-canvas-root{position:relative;width:100%;height:100%;min-width:0;min-height:0;display:block;overflow:visible;background:transparent}
+    #stage{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible;background:transparent!important}
+    #surface-layer{position:absolute;left:50%;top:50%;width:var(--design-w);height:var(--design-h);aspect-ratio:750 / 500;transform-origin:center center;transform:translate(-50%,-50%) scale(var(--surface-scale));overflow:visible;background:transparent;will-change:transform;contain:layout style}
+    #design-surface{position:relative;width:var(--design-w);height:var(--design-h);flex-shrink:0;transform-origin:var(--surface-origin);overflow:visible;background:transparent}
+    #surface-layer>#design-surface{width:var(--design-w)!important;height:var(--design-h)!important;transform:none!important}
+    #content{position:relative;width:100%;height:100%;display:grid;place-items:center;overflow:hidden;background:transparent;margin:0}
+    .glass-tabs{width:750px;height:300px;position:relative;background:transparent;overflow:hidden;padding:18px;transform:translate(0px,0px);font-family:&quot;Poppins&quot;, Arial, Helvetica, sans-serif;color:#000000;--tab-hover-lift:1px}
+    .glass-tab-list{position:relative;width:100%;height:42px;display:flex;align-items:center;gap:0;padding:7px;border-radius:100px;border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:linear-gradient(90deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.055) 42%, rgba(255,255,255,0.035) 72%, rgba(255,255,255,0.10) 100%);box-shadow:0 8px 32px rgba(0, 0, 0, 0.22),inset 0 1px 0 rgba(255,255,255,.30),inset 0 -1px 0 rgba(0,0,0,.08);overflow:hidden}
+    .glass-tab-list::before,.glass-panel::before{content:&quot;&quot;;position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.10) 34%, rgba(255,255,255,0) 62%);pointer-events:none;z-index:1}
+    .glass-tab-rail{position:relative;z-index:2;display:flex;align-items:center;gap:8px;width:376px;min-width:0;transform:translateX(20px);will-change:transform;transition:transform 180ms cubic-bezier(.4,0,.2,1)}
+    .glass-tab{position:relative;z-index:2;width:120px;flex:0 0 120px;min-width:120px;height:28px;padding:0 8px;display:inline-flex;align-items:center;justify-content:center;border-radius:100px;border:1px solid transparent;background:transparent;font-family:&quot;Poppins&quot;, Arial, Helvetica, sans-serif;font-size:12px;font-weight:700;line-height:1;color:#000000;opacity:.62;cursor:pointer;user-select:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:background 180ms,border-color 180ms,box-shadow 180ms,opacity 180ms,transform 180ms cubic-bezier(.34,1.56,.64,1)}
+    .glass-tabs.hover-enabled .glass-tab:hover,.glass-tabs.hover-enabled .glass-tab.is-auto-hover{opacity:1;transform:translateY(calc(var(--tab-hover-lift) * -1))}
+    .glass-tab[aria-selected=&quot;true&quot;]{opacity:1;background:rgba(255, 255, 255, 0.11000000000000001);border-color:rgba(255, 255, 255, 0.26);box-shadow:0 3px 14px rgba(0, 0, 0, 0.22),inset 0 1px 0 rgba(255,255,255,.34),inset 0 -1px 0 rgba(0,0,0,.10)}
+    .glass-tab:focus-visible{outline:2px solid #5EE7DF;outline-offset:2px}
+    .glass-panel-wrap{position:relative;margin-top:14px;width:100%;height:208px;display:block}
+    .glass-panel{position:absolute;inset:0;overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:radial-gradient(circle at 0% 50%, rgba(255,255,255,0.10), transparent 28%), radial-gradient(circle at 100% 65%, rgba(255,255,255,0.08), transparent 32%), linear-gradient(135deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.055) 42%, rgba(255,255,255,0.035) 72%, rgba(255,255,255,0.10) 100%);box-shadow:0 8px 32px rgba(0, 0, 0, 0.22),inset 0 1px 0 rgba(255,255,255,.30),inset 0 -1px 0 rgba(0,0,0,.08);opacity:0;visibility:hidden;transform:translateY(10px) scale(0.985);transition:opacity 360ms cubic-bezier(.4,0,.2,1),visibility 360ms,transform 360ms cubic-bezier(.34,1.56,.64,1)}
+    .glass-panel.is-active{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+    .glass-panel-content{position:relative;z-index:2;padding:30px 30px}
+    .glass-panel-title{font-family:&quot;Poppins&quot;, Georgia,&quot;Times New Roman&quot;,serif;font-size:29px;line-height:1;font-weight:700;color:#000000;margin-bottom:15.950000000000001px}
+    .glass-panel-text{font-family:&quot;Poppins&quot;, Arial, Helvetica, sans-serif;font-size:14px;line-height:1.55;font-weight:500;color:rgba(38, 38, 38, 0.72)}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+      </style>
+<script type=&quot;application/json&quot; id=&quot;vincta-html-embed-meta&quot;>{&quot;sourceHtmlId&quot;:&quot;&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;editSourceUrl&quot;:&quot;&quot;,&quot;htmlType&quot;:0,&quot;htmlSource&quot;:null,&quot;htmlTemplateId&quot;:null,&quot;width&quot;:752,&quot;htmlDesignWidth&quot;:752,&quot;height&quot;:502,&quot;htmlDesignHeight&quot;:502}</script>
+</head>
+<body style=&quot;--design-w:750px;--design-h:500px;--surface-scale:1;width:100%;height:100%&quot; data-vincta-component=&quot;glass-tabs&quot; data-vincta-design-width=&quot;750&quot; data-vincta-design-height=&quot;500&quot; data-vincta-aspect-ratio=&quot;1.5&quot; data-vincta-fit=&quot;contain&quot; data-vincta-lock-aspect-ratio=&quot;true&quot;>
+  <div id=&quot;vincta-canvas-root&quot; data-vincta-component=&quot;glass-tabs&quot; data-vincta-width=&quot;750&quot; data-vincta-height=&quot;500&quot; data-vincta-design-width=&quot;750&quot; data-vincta-design-height=&quot;500&quot; data-vincta-aspect-ratio=&quot;1.5&quot; data-vincta-fit=&quot;contain&quot; data-vincta-lock-aspect-ratio=&quot;true&quot;><div id=&quot;stage&quot; data-vincta-layer=&quot;outer&quot; data-vincta-surface-host data-vincta-params=&quot;{&amp;quot;schemaVersion&amp;quot;:1,&amp;quot;componentType&amp;quot;:&amp;quot;glass-tabs&amp;quot;,&amp;quot;width&amp;quot;:750,&amp;quot;height&amp;quot;:300,&amp;quot;stagePad&amp;quot;:18,&amp;quot;tabListHeight&amp;quot;:42,&amp;quot;tabListPad&amp;quot;:7,&amp;quot;navRadius&amp;quot;:100,&amp;quot;tabGap&amp;quot;:8,&amp;quot;tabWidth&amp;quot;:120,&amp;quot;tabPad&amp;quot;:20,&amp;quot;tabHeight&amp;quot;:28,&amp;quot;tabRadius&amp;quot;:100,&amp;quot;tabRadiusTopLeft&amp;quot;:100,&amp;quot;tabRadiusTopRight&amp;quot;:100,&amp;quot;tabRadiusBottomRight&amp;quot;:100,&amp;quot;tabRadiusBottomLeft&amp;quot;:100,&amp;quot;panelTopGap&amp;quot;:14,&amp;quot;panelHeight&amp;quot;:132,&amp;quot;panelRadius&amp;quot;:22,&amp;quot;contentPadX&amp;quot;:30,&amp;quot;contentPadY&amp;quot;:30,&amp;quot;offsetX&amp;quot;:0,&amp;quot;offsetY&amp;quot;:0,&amp;quot;font&amp;quot;:&amp;quot;Poppins&amp;quot;,&amp;quot;displayFont&amp;quot;:&amp;quot;Poppins&amp;quot;,&amp;quot;tabFontSize&amp;quot;:12,&amp;quot;tabFontWeight&amp;quot;:700,&amp;quot;titleSize&amp;quot;:29,&amp;quot;titleWeight&amp;quot;:700,&amp;quot;bodySize&amp;quot;:14,&amp;quot;bodyWeight&amp;quot;:500,&amp;quot;bodyLineHeight&amp;quot;:1.55,&amp;quot;blur&amp;quot;:18,&amp;quot;glassAlpha&amp;quot;:0.5,&amp;quot;panelGlassAlpha&amp;quot;:0.56,&amp;quot;glowAlpha&amp;quot;:0.18,&amp;quot;panelGlowAlpha&amp;quot;:0.2,&amp;quot;goldGlowAlpha&amp;quot;:0.12,&amp;quot;activeAlpha&amp;quot;:0.2,&amp;quot;shadowAlpha&amp;quot;:0.22,&amp;quot;shadowY&amp;quot;:8,&amp;quot;shadowBlur&amp;quot;:32,&amp;quot;transparentBackground&amp;quot;:true,&amp;quot;backgroundColor&amp;quot;:&amp;quot;#07080d&amp;quot;,&amp;quot;revealY&amp;quot;:10,&amp;quot;revealScale&amp;quot;:0.985,&amp;quot;startColor&amp;quot;:&amp;quot;#7A8290&amp;quot;,&amp;quot;midAColor&amp;quot;:&amp;quot;#414656&amp;quot;,&amp;quot;midBColor&amp;quot;:&amp;quot;#303242&amp;quot;,&amp;quot;endColor&amp;quot;:&amp;quot;#4E4362&amp;quot;,&amp;quot;panelStartColor&amp;quot;:&amp;quot;#7E8592&amp;quot;,&amp;quot;panelMidAColor&amp;quot;:&amp;quot;#404554&amp;quot;,&amp;quot;panelMidBColor&amp;quot;:&amp;quot;#303242&amp;quot;,&amp;quot;panelEndColor&amp;quot;:&amp;quot;#4B425F&amp;quot;,&amp;quot;leftGlowColor&amp;quot;:&amp;quot;#5EE7DF&amp;quot;,&amp;quot;rightGlowColor&amp;quot;:&amp;quot;#B490F5&amp;quot;,&amp;quot;goldGlowColor&amp;quot;:&amp;quot;#FFD27F&amp;quot;,&amp;quot;textColor&amp;quot;:&amp;quot;#000000&amp;quot;,&amp;quot;titleTextColor&amp;quot;:&amp;quot;#000000&amp;quot;,&amp;quot;softTextColor&amp;quot;:&amp;quot;#262626&amp;quot;,&amp;quot;focusColor&amp;quot;:&amp;quot;#5EE7DF&amp;quot;,&amp;quot;shadowColor&amp;quot;:&amp;quot;#000000&amp;quot;,&amp;quot;activeIndex&amp;quot;:1,&amp;quot;panelDisplay&amp;quot;:true,&amp;quot;hoverEnabled&amp;quot;:true,&amp;quot;autoHoverEnabled&amp;quot;:false,&amp;quot;autoHoverDelay&amp;quot;:1600,&amp;quot;hoverLift&amp;quot;:1,&amp;quot;labels&amp;quot;:[&amp;quot;What we offer\n&amp;quot;,&amp;quot;Resources&amp;quot;,&amp;quot;About Us&amp;quot;],&amp;quot;titles&amp;quot;:[&amp;quot;For Business&amp;quot;,&amp;quot;Resources &amp;amp; More&amp;quot;,&amp;quot;About Us&amp;quot;],&amp;quot;texts&amp;quot;:[&amp;quot;Music brands, Sound Effects, Artist Collaborations, Instruments &amp;amp; Tools&amp;quot;,&amp;quot;Desktop and Mobile Apps, Solutions, Plugins and Licensing&amp;quot;,&amp;quot;We’ve transformed the soundtracking experience for global brands and professional creators, with an expansive catalog of world-class music and sound effects that’s seen and heard over 3 billion times a day around the globe.&amp;quot;],&amp;quot;links&amp;quot;:[&amp;quot;&amp;quot;,&amp;quot;https://vinstock.ai/&amp;quot;,&amp;quot;https://vinstock.ai/&amp;quot;],&amp;quot;mdTheme&amp;quot;:null}&quot;><div id=&quot;surface-layer&quot; data-vincta-layer=&quot;surface-layer&quot; data-vincta-fit=&quot;contain&quot; data-vincta-resizable=&quot;true&quot; data-vincta-lock-aspect-ratio=&quot;true&quot; data-design-width=&quot;750&quot; data-design-height=&quot;500&quot; data-vincta-aspect-ratio=&quot;1.5&quot;><div id=&quot;design-surface&quot; data-vincta-surface data-vincta-layer=&quot;design-surface&quot; data-design-width=&quot;750&quot; data-design-height=&quot;500&quot; style=&quot;--design-w:750px;--design-h:500px;--surface-origin:center center;width:750px;height:500px;aspect-ratio:750 / 500;transform:none&quot;><div id=&quot;content&quot; data-vincta-layer=&quot;content&quot;><div class=&quot;glass-tabs hover-enabled &quot; id=&quot;glass-tabs&quot;><div class=&quot;glass-tab-list&quot; role=&quot;tablist&quot; aria-label=&quot;Demo tabs&quot;><div class=&quot;glass-tab-rail&quot;><button class=&quot;glass-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;panel-0&quot; id=&quot;tab-0&quot; data-index=&quot;0&quot;>What we offer
+</button><button class=&quot;glass-tab&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;panel-1&quot; id=&quot;tab-1&quot; data-index=&quot;1&quot; data-link=&quot;https://vinstock.ai/&quot; data-url=&quot;https://vinstock.ai/&quot; data-vincta-link=&quot;https://vinstock.ai/&quot; title=&quot;https://vinstock.ai/&quot;>Resources</button><button class=&quot;glass-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;panel-2&quot; id=&quot;tab-2&quot; data-index=&quot;2&quot; data-link=&quot;https://vinstock.ai/&quot; data-url=&quot;https://vinstock.ai/&quot; data-vincta-link=&quot;https://vinstock.ai/&quot; title=&quot;https://vinstock.ai/&quot;>About Us</button></div></div><div class=&quot;glass-panel-wrap&quot;><section class=&quot;glass-panel&quot; role=&quot;tabpanel&quot; id=&quot;panel-0&quot; aria-labelledby=&quot;tab-0&quot;><div class=&quot;glass-panel-content&quot;><h3 class=&quot;glass-panel-title&quot;>For Business</h3><p class=&quot;glass-panel-text&quot;>Music brands, Sound Effects, Artist Collaborations, Instruments &amp;amp; Tools</p></div></section><section class=&quot;glass-panel is-active&quot; role=&quot;tabpanel&quot; id=&quot;panel-1&quot; aria-labelledby=&quot;tab-1&quot;><div class=&quot;glass-panel-content&quot;><h3 class=&quot;glass-panel-title&quot;>Resources &amp;amp; More</h3><p class=&quot;glass-panel-text&quot;>Desktop and Mobile Apps, Solutions, Plugins and Licensing</p></div></section><section class=&quot;glass-panel&quot; role=&quot;tabpanel&quot; id=&quot;panel-2&quot; aria-labelledby=&quot;tab-2&quot;><div class=&quot;glass-panel-content&quot;><h3 class=&quot;glass-panel-title&quot;>About Us</h3><p class=&quot;glass-panel-text&quot;>We’ve transformed the soundtracking experience for global brands and professional creators, with an expansive catalog of world-class music and sound effects that’s seen and heard over 3 billion times a day around the globe.</p></div></section></div></div></div></div></div></div></div>
+  <script id=&quot;vincta-template-params&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:1,&quot;componentType&quot;:&quot;glass-tabs&quot;,&quot;width&quot;:750,&quot;height&quot;:300,&quot;stagePad&quot;:18,&quot;tabListHeight&quot;:42,&quot;tabListPad&quot;:7,&quot;navRadius&quot;:100,&quot;tabGap&quot;:8,&quot;tabWidth&quot;:120,&quot;tabPad&quot;:20,&quot;tabHeight&quot;:28,&quot;tabRadius&quot;:100,&quot;tabRadiusTopLeft&quot;:100,&quot;tabRadiusTopRight&quot;:100,&quot;tabRadiusBottomRight&quot;:100,&quot;tabRadiusBottomLeft&quot;:100,&quot;panelTopGap&quot;:14,&quot;panelHeight&quot;:132,&quot;panelRadius&quot;:22,&quot;contentPadX&quot;:30,&quot;contentPadY&quot;:30,&quot;offsetX&quot;:0,&quot;offsetY&quot;:0,&quot;font&quot;:&quot;Poppins&quot;,&quot;displayFont&quot;:&quot;Poppins&quot;,&quot;tabFontSize&quot;:12,&quot;tabFontWeight&quot;:700,&quot;titleSize&quot;:29,&quot;titleWeight&quot;:700,&quot;bodySize&quot;:14,&quot;bodyWeight&quot;:500,&quot;bodyLineHeight&quot;:1.55,&quot;blur&quot;:18,&quot;glassAlpha&quot;:0.5,&quot;panelGlassAlpha&quot;:0.56,&quot;glowAlpha&quot;:0.18,&quot;panelGlowAlpha&quot;:0.2,&quot;goldGlowAlpha&quot;:0.12,&quot;activeAlpha&quot;:0.2,&quot;shadowAlpha&quot;:0.22,&quot;shadowY&quot;:8,&quot;shadowBlur&quot;:32,&quot;transparentBackground&quot;:true,&quot;backgroundColor&quot;:&quot;#07080d&quot;,&quot;revealY&quot;:10,&quot;revealScale&quot;:0.985,&quot;startColor&quot;:&quot;#7A8290&quot;,&quot;midAColor&quot;:&quot;#414656&quot;,&quot;midBColor&quot;:&quot;#303242&quot;,&quot;endColor&quot;:&quot;#4E4362&quot;,&quot;panelStartColor&quot;:&quot;#7E8592&quot;,&quot;panelMidAColor&quot;:&quot;#404554&quot;,&quot;panelMidBColor&quot;:&quot;#303242&quot;,&quot;panelEndColor&quot;:&quot;#4B425F&quot;,&quot;leftGlowColor&quot;:&quot;#5EE7DF&quot;,&quot;rightGlowColor&quot;:&quot;#B490F5&quot;,&quot;goldGlowColor&quot;:&quot;#FFD27F&quot;,&quot;textColor&quot;:&quot;#000000&quot;,&quot;titleTextColor&quot;:&quot;#000000&quot;,&quot;softTextColor&quot;:&quot;#262626&quot;,&quot;focusColor&quot;:&quot;#5EE7DF&quot;,&quot;shadowColor&quot;:&quot;#000000&quot;,&quot;activeIndex&quot;:1,&quot;panelDisplay&quot;:true,&quot;hoverEnabled&quot;:true,&quot;autoHoverEnabled&quot;:false,&quot;autoHoverDelay&quot;:1600,&quot;hoverLift&quot;:1,&quot;labels&quot;:[&quot;What we offer\n&quot;,&quot;Resources&quot;,&quot;About Us&quot;],&quot;titles&quot;:[&quot;For Business&quot;,&quot;Resources &amp; More&quot;,&quot;About Us&quot;],&quot;texts&quot;:[&quot;Music brands, Sound Effects, Artist Collaborations, Instruments &amp; Tools&quot;,&quot;Desktop and Mobile Apps, Solutions, Plugins and Licensing&quot;,&quot;We’ve transformed the soundtracking experience for global brands and professional creators, with an expansive catalog of world-class music and sound effects that’s seen and heard over 3 billion times a day around the globe.&quot;],&quot;links&quot;:[&quot;&quot;,&quot;https://vinstock.ai/&quot;,&quot;https://vinstock.ai/&quot;],&quot;mdTheme&quot;:null}</script>
+  <script id=&quot;vct-params&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:1,&quot;componentType&quot;:&quot;glass-tabs&quot;,&quot;width&quot;:750,&quot;height&quot;:300,&quot;stagePad&quot;:18,&quot;tabListHeight&quot;:42,&quot;tabListPad&quot;:7,&quot;navRadius&quot;:100,&quot;tabGap&quot;:8,&quot;tabWidth&quot;:120,&quot;tabPad&quot;:20,&quot;tabHeight&quot;:28,&quot;tabRadius&quot;:100,&quot;tabRadiusTopLeft&quot;:100,&quot;tabRadiusTopRight&quot;:100,&quot;tabRadiusBottomRight&quot;:100,&quot;tabRadiusBottomLeft&quot;:100,&quot;panelTopGap&quot;:14,&quot;panelHeight&quot;:132,&quot;panelRadius&quot;:22,&quot;contentPadX&quot;:30,&quot;contentPadY&quot;:30,&quot;offsetX&quot;:0,&quot;offsetY&quot;:0,&quot;font&quot;:&quot;Poppins&quot;,&quot;displayFont&quot;:&quot;Poppins&quot;,&quot;tabFontSize&quot;:12,&quot;tabFontWeight&quot;:700,&quot;titleSize&quot;:29,&quot;titleWeight&quot;:700,&quot;bodySize&quot;:14,&quot;bodyWeight&quot;:500,&quot;bodyLineHeight&quot;:1.55,&quot;blur&quot;:18,&quot;glassAlpha&quot;:0.5,&quot;panelGlassAlpha&quot;:0.56,&quot;glowAlpha&quot;:0.18,&quot;panelGlowAlpha&quot;:0.2,&quot;goldGlowAlpha&quot;:0.12,&quot;activeAlpha&quot;:0.2,&quot;shadowAlpha&quot;:0.22,&quot;shadowY&quot;:8,&quot;shadowBlur&quot;:32,&quot;transparentBackground&quot;:true,&quot;backgroundColor&quot;:&quot;#07080d&quot;,&quot;revealY&quot;:10,&quot;revealScale&quot;:0.985,&quot;startColor&quot;:&quot;#7A8290&quot;,&quot;midAColor&quot;:&quot;#414656&quot;,&quot;midBColor&quot;:&quot;#303242&quot;,&quot;endColor&quot;:&quot;#4E4362&quot;,&quot;panelStartColor&quot;:&quot;#7E8592&quot;,&quot;panelMidAColor&quot;:&quot;#404554&quot;,&quot;panelMidBColor&quot;:&quot;#303242&quot;,&quot;panelEndColor&quot;:&quot;#4B425F&quot;,&quot;leftGlowColor&quot;:&quot;#5EE7DF&quot;,&quot;rightGlowColor&quot;:&quot;#B490F5&quot;,&quot;goldGlowColor&quot;:&quot;#FFD27F&quot;,&quot;textColor&quot;:&quot;#000000&quot;,&quot;titleTextColor&quot;:&quot;#000000&quot;,&quot;softTextColor&quot;:&quot;#262626&quot;,&quot;focusColor&quot;:&quot;#5EE7DF&quot;,&quot;shadowColor&quot;:&quot;#000000&quot;,&quot;activeIndex&quot;:1,&quot;panelDisplay&quot;:true,&quot;hoverEnabled&quot;:true,&quot;autoHoverEnabled&quot;:false,&quot;autoHoverDelay&quot;:1600,&quot;hoverLift&quot;:1,&quot;labels&quot;:[&quot;What we offer\n&quot;,&quot;Resources&quot;,&quot;About Us&quot;],&quot;titles&quot;:[&quot;For Business&quot;,&quot;Resources &amp; More&quot;,&quot;About Us&quot;],&quot;texts&quot;:[&quot;Music brands, Sound Effects, Artist Collaborations, Instruments &amp; Tools&quot;,&quot;Desktop and Mobile Apps, Solutions, Plugins and Licensing&quot;,&quot;We’ve transformed the soundtracking experience for global brands and professional creators, with an expansive catalog of world-class music and sound effects that’s seen and heard over 3 billion times a day around the globe.&quot;],&quot;links&quot;:[&quot;&quot;,&quot;https://vinstock.ai/&quot;,&quot;https://vinstock.ai/&quot;],&quot;mdTheme&quot;:null}</script>
+  <script id=&quot;vincta-template-snapshot&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:1,&quot;componentType&quot;:&quot;glass-tabs&quot;,&quot;width&quot;:750,&quot;height&quot;:300,&quot;stagePad&quot;:18,&quot;tabListHeight&quot;:42,&quot;tabListPad&quot;:7,&quot;navRadius&quot;:100,&quot;tabGap&quot;:8,&quot;tabWidth&quot;:120,&quot;tabPad&quot;:20,&quot;tabHeight&quot;:28,&quot;tabRadius&quot;:100,&quot;tabRadiusTopLeft&quot;:100,&quot;tabRadiusTopRight&quot;:100,&quot;tabRadiusBottomRight&quot;:100,&quot;tabRadiusBottomLeft&quot;:100,&quot;panelTopGap&quot;:14,&quot;panelHeight&quot;:132,&quot;panelRadius&quot;:22,&quot;contentPadX&quot;:30,&quot;contentPadY&quot;:30,&quot;offsetX&quot;:0,&quot;offsetY&quot;:0,&quot;font&quot;:&quot;Poppins&quot;,&quot;displayFont&quot;:&quot;Poppins&quot;,&quot;tabFontSize&quot;:12,&quot;tabFontWeight&quot;:700,&quot;titleSize&quot;:29,&quot;titleWeight&quot;:700,&quot;bodySize&quot;:14,&quot;bodyWeight&quot;:500,&quot;bodyLineHeight&quot;:1.55,&quot;blur&quot;:18,&quot;glassAlpha&quot;:0.5,&quot;panelGlassAlpha&quot;:0.56,&quot;glowAlpha&quot;:0.18,&quot;panelGlowAlpha&quot;:0.2,&quot;goldGlowAlpha&quot;:0.12,&quot;activeAlpha&quot;:0.2,&quot;shadowAlpha&quot;:0.22,&quot;shadowY&quot;:8,&quot;shadowBlur&quot;:32,&quot;transparentBackground&quot;:true,&quot;backgroundColor&quot;:&quot;#07080d&quot;,&quot;revealY&quot;:10,&quot;revealScale&quot;:0.985,&quot;startColor&quot;:&quot;#7A8290&quot;,&quot;midAColor&quot;:&quot;#414656&quot;,&quot;midBColor&quot;:&quot;#303242&quot;,&quot;endColor&quot;:&quot;#4E4362&quot;,&quot;panelStartColor&quot;:&quot;#7E8592&quot;,&quot;panelMidAColor&quot;:&quot;#404554&quot;,&quot;panelMidBColor&quot;:&quot;#303242&quot;,&quot;panelEndColor&quot;:&quot;#4B425F&quot;,&quot;leftGlowColor&quot;:&quot;#5EE7DF&quot;,&quot;rightGlowColor&quot;:&quot;#B490F5&quot;,&quot;goldGlowColor&quot;:&quot;#FFD27F&quot;,&quot;textColor&quot;:&quot;#000000&quot;,&quot;titleTextColor&quot;:&quot;#000000&quot;,&quot;softTextColor&quot;:&quot;#262626&quot;,&quot;focusColor&quot;:&quot;#5EE7DF&quot;,&quot;shadowColor&quot;:&quot;#000000&quot;,&quot;activeIndex&quot;:1,&quot;panelDisplay&quot;:true,&quot;hoverEnabled&quot;:true,&quot;autoHoverEnabled&quot;:false,&quot;autoHoverDelay&quot;:1600,&quot;hoverLift&quot;:1,&quot;labels&quot;:[&quot;What we offer\n&quot;,&quot;Resources&quot;,&quot;About Us&quot;],&quot;titles&quot;:[&quot;For Business&quot;,&quot;Resources &amp; More&quot;,&quot;About Us&quot;],&quot;texts&quot;:[&quot;Music brands, Sound Effects, Artist Collaborations, Instruments &amp; Tools&quot;,&quot;Desktop and Mobile Apps, Solutions, Plugins and Licensing&quot;,&quot;We’ve transformed the soundtracking experience for global brands and professional creators, with an expansive catalog of world-class music and sound effects that’s seen and heard over 3 billion times a day around the globe.&quot;],&quot;links&quot;:[&quot;&quot;,&quot;https://vinstock.ai/&quot;,&quot;https://vinstock.ai/&quot;],&quot;mdTheme&quot;:null}</script>
+  <script>
+    (function(){
+      var DESIGN_W=750, DESIGN_H=500, queued=false;
+      function fitSurface(){
+        var surface=document.getElementById('design-surface');
+        var root=document.getElementById('vincta-canvas-root');
+        var stage=document.getElementById('stage');
+        var layer=document.getElementById('surface-layer');
+        if(!surface||!layer)return;
+        var host=stage||layer.parentElement||root||document.documentElement;
+        surface.style.setProperty('--design-w',DESIGN_W+'px');
+        surface.style.setProperty('--design-h',DESIGN_H+'px');
+        surface.style.setProperty('--surface-origin','center center');
+        surface.style.width=DESIGN_W+'px';
+        surface.style.height=DESIGN_H+'px';
+        surface.style.aspectRatio=DESIGN_W+' / '+DESIGN_H;
+        surface.style.transformOrigin='center center';
+        surface.style.transform='none';
+        layer.style.width=DESIGN_W+'px';
+        layer.style.height=DESIGN_H+'px';
+        layer.style.aspectRatio=DESIGN_W+' / '+DESIGN_H;
+        layer.style.transformOrigin='center center';
+        var rect=host&amp;&amp;host.getBoundingClientRect?host.getBoundingClientRect():null;
+        var cw=Math.max(0,host&amp;&amp;host.clientWidth||rect&amp;&amp;rect.width||window.innerWidth||DESIGN_W);
+        var ch=Math.max(0,host&amp;&amp;host.clientHeight||rect&amp;&amp;rect.height||window.innerHeight||DESIGN_H);
+        if(cw<=0||ch<=0)return;
+        var scale=Math.max(.01,Math.min(cw/DESIGN_W,ch/DESIGN_H));
+        var scaleText=scale.toFixed(4);
+        document.documentElement.style.setProperty('--design-w',DESIGN_W+'px');
+        document.documentElement.style.setProperty('--design-h',DESIGN_H+'px');
+        document.documentElement.style.setProperty('--surface-scale',scaleText);
+        layer.style.transform='translate(-50%, -50%) scale('+scaleText+')';
+        surface.dataset.surfaceScale=scaleText;
+        window.__VINCTA_SURFACE_META__={componentType:'glass-tabs',designW:DESIGN_W,designH:DESIGN_H,canvasWidth:cw,canvasHeight:ch,aspectRatio:DESIGN_W/DESIGN_H,transformOrigin:'center center',scaleMode:'contain',scale:scale};
+      }
+      function scheduleFit(){ if(queued)return; queued=true; requestAnimationFrame(function(){ queued=false; fitSurface(); }); }
+      window.vinctaFitSurface=fitSurface;
+      window.vinctaSetCanvasSize=function(width,height){var root=document.getElementById('vincta-canvas-root'),w=Number(width),h=Number(height);if(!root)return false;if(Number.isFinite(w)&amp;&amp;w>0)root.style.width=w+'px';if(Number.isFinite(h)&amp;&amp;h>0)root.style.height=h+'px';fitSurface();return true;};
+      var params={autoHoverEnabled:false,autoHoverDelay:1600,hoverEnabled:true};
+      var autoTimer=null, paused=false, activeIndex=1;
+      function safeAssociatedUrl(value){
+        var raw=String(value||'').trim().replace(/[\u0000-\u001F\u007F-\u009F]+/g,'');
+        if(!raw)return '';
+        var compact=raw.replace(/[\s\u0000-\u001F\u007F-\u009F]+/g,'');
+        if(/^(?:javascript|vbscript|data):/i.test(compact))return '';
+        var hasProtocol=/^[a-z][a-z0-9+.-]*:/i.test(raw);
+        var isRelative=/^(?:#|\/|\.\/|\.\.\/)/.test(raw);
+        var bareDomain=/^(?:[a-z0-9-]+\.)+[a-z]{2,}(?::\d{2,5})?(?:[\/?#].*)?$/i.test(raw);
+        if(!hasProtocol&amp;&amp;!isRelative&amp;&amp;bareDomain)raw='https://'+raw;
+        try{var url=new URL(raw,window.location.href);return ['http:','https:','mailto:','tel:'].indexOf(url.protocol)>-1?url.href:'';}catch(_){return isRelative?raw:'';}
+      }
+      function openAssociatedLink(value){
+        var url=safeAssociatedUrl(value);
+        if(!url)return false;
+        try{
+          var link=document.createElement('a');
+          link.href=url;link.target='_blank';link.rel='noopener noreferrer';
+          link.style.position='fixed';link.style.left='-9999px';link.style.top='-9999px';
+          document.body.appendChild(link);link.click();setTimeout(function(){try{link.remove();}catch(_){}},0);
+          return true;
+        }catch(_){}
+        try{var opened=window.open(url,'_blank');if(opened){try{opened.opener=null;}catch(_){} return true;}}catch(_){}
+        if(window.top&amp;&amp;window.top!==window){try{var openedTop=window.top.open(url,'_blank');if(openedTop){try{openedTop.opener=null;}catch(_){} return true;}}catch(_){} }
+        return false;
+      }
+
+      function stopAuto(clearVisual){
+        clearInterval(autoTimer);autoTimer=null;
+        if(clearVisual!==false){Array.prototype.slice.call(document.querySelectorAll('.glass-tab.is-auto-hover')).forEach(function(tab){tab.classList.remove('is-auto-hover');});}
+      }
+      function activate(root,index,fromAuto){
+        var tabs=Array.prototype.slice.call(root.querySelectorAll('.glass-tab'));
+        var panels=Array.prototype.slice.call(root.querySelectorAll('.glass-panel'));
+        activeIndex=Math.max(0,Math.min(index,tabs.length-1));
+        tabs.forEach(function(tab,i){ var active=i===activeIndex; tab.setAttribute('aria-selected', String(active)); tab.setAttribute('tabindex', active ? '0' : '-1'); tab.classList.toggle('is-auto-hover', Boolean(fromAuto&amp;&amp;active)); });
+        panels.forEach(function(panel,i){ panel.classList.toggle('is-active', i===activeIndex); });
+      }
+      function startAuto(){
+        stopAuto(true);
+        var root=document.getElementById('glass-tabs');
+        var tabs=Array.prototype.slice.call(root.querySelectorAll('.glass-tab'));
+        if(!params.autoHoverEnabled||paused||tabs.length<2)return;
+        autoTimer=setInterval(function(){ if(paused)return; activate(root,(activeIndex+1)%tabs.length,true); }, Math.max(500, params.autoHoverDelay||1600));
+      }
+      function pauseAuto(){paused=true;stopAuto(true);}
+      function resumeAuto(){paused=false;startAuto();}
+      function wireTabs(){
+        var root=document.getElementById('glass-tabs');
+        var tabs=Array.prototype.slice.call(root.querySelectorAll('.glass-tab'));
+        tabs.forEach(function(tab,index){
+          tab.addEventListener('click',function(event){ event.preventDefault(); openAssociatedLink(tab.getAttribute('data-link')||tab.getAttribute('data-url')||tab.getAttribute('data-vincta-link')||''); activate(root,index,false); });
+          tab.addEventListener('mouseenter',function(){ if(!params.hoverEnabled)return; pauseAuto(); activate(root,index,false); });
+          tab.addEventListener('mouseleave',function(){ if(!params.hoverEnabled)return; resumeAuto(); });
+          tab.addEventListener('focus',function(){ if(!params.hoverEnabled)return; pauseAuto(); activate(root,index,false); });
+          tab.addEventListener('blur',function(){ if(!params.hoverEnabled)return; resumeAuto(); });
+          tab.addEventListener('keydown',function(event){
+            var next=index;
+            if(event.key==='ArrowRight'){event.preventDefault();next=(index+1)%tabs.length;}
+            if(event.key==='ArrowLeft'){event.preventDefault();next=(index-1+tabs.length)%tabs.length;}
+            if(event.key==='Home'){event.preventDefault();next=0;}
+            if(event.key==='End'){event.preventDefault();next=tabs.length-1;}
+            if(next!==index){activate(root,next,false);tabs[next].focus();}
+          });
+        });
+        startAuto();
+      }
+      window.addEventListener('resize',function(){fitSurface();scheduleFit();});
+      window.addEventListener('load',function(){fitSurface();wireTabs();scheduleFit();});
+      if(document.fonts&amp;&amp;document.fonts.ready)document.fonts.ready.then(scheduleFit);
+      if('ResizeObserver' in window){var root=document.getElementById('vincta-canvas-root'),stage=document.getElementById('stage');if(root)new ResizeObserver(scheduleFit).observe(root);if(stage)new ResizeObserver(scheduleFit).observe(stage);}
+      setTimeout(scheduleFit,0);setTimeout(scheduleFit,150);
+      fitSurface(); wireTabs(); scheduleFit();
+    })();
+  </script>
+<script id=&quot;embed-fit-design-uniform&quot;>(function(){
+      var DW = 750, DH = 500;
+      var MAX_SCALE = 10;
+      function applyFit() {
+        try {
+          var doc = document;
+          var root = doc.documentElement;
+          var body = doc.body;
+          if (!body) return;
+          /* clientWidth/Height 与 iframe 内容区一致；innerWidth 偶发含亚像素误差，缩到很小时易底部/右侧被裁 1px */
+          var cw = (root &amp;&amp; root.clientWidth) || window.innerWidth || 0;
+          var ch = (root &amp;&amp; root.clientHeight) || window.innerHeight || 0;
+          if (cw < 10 || ch < 10) {
+            setTimeout(applyFit, 0);
+            return;
+          }
+          root.style.overflow = 'hidden';
+          root.style.height = '100%';
+          root.style.margin = '0';
+          root.style.padding = '0';
+          body.style.margin = '0';
+          body.style.padding = '0';
+          body.style.display = 'block';
+          body.style.alignItems = '';
+          body.style.justifyContent = '';
+          body.style.flexDirection = '';
+          /* 光晕/shadow 会画出 body 盒外；visible 让绘制不被 body 裁掉，由 html 与 iframe 视口收口 */
+          body.style.overflow = 'visible';
+          body.style.boxSizing = 'border-box';
+          body.style.position = 'absolute';
+          body.style.transformOrigin = '0 0';
+          body.style.width = DW + 'px';
+          body.style.height = DH + 'px';
+          var bw = Math.max(DW, body.scrollWidth, root.scrollWidth);
+          var bh = Math.max(DH, body.scrollHeight, root.scrollHeight);
+          body.style.width = bw + 'px';
+          body.style.height = bh + 'px';
+          var slack = 0;
+          var fitW = bw + slack;
+          var fitH = bh + slack;
+          var pad = 0;
+          var s = Math.min((cw - pad) / fitW, (ch - pad) / fitH);
+          if (!isFinite(s) || s <= 0) s = 1;
+          if (s > MAX_SCALE) s = MAX_SCALE;
+          body.style.transform = 'scale(' + s + ')';
+          body.style.left = Math.max(0, (cw - fitW * s) / 2) + 'px';
+          body.style.top = Math.max(0, (ch - fitH * s) / 2) + 'px';
+        } catch (e) {}
+      }
+      function runWhenReady() {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', runWhenReady);
+          return;
+        }
+        applyFit();
+        setTimeout(applyFit, 0);
+        setTimeout(applyFit, 150);
+        setTimeout(applyFit, 400);
+        setTimeout(applyFit, 800);
+      }
+      runWhenReady();
+      window.addEventListener('resize', applyFit);
+    })();</script>
+</body>
+</html>"
+    ></iframe>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DW = 750;
+  var DH = 500;
+  var root = document.getElementById('vincta-design-root');
+  var viewport = document.getElementById('vincta-design-viewport');
+  var shell = document.getElementById('vincta-design-shell');
+  if (!root || !viewport || !shell || !(DW > 0) || !(DH > 0)) return;
+
+  function fit() {
+    var rw = root.clientWidth || 0;
+    var rh = root.clientHeight || 0;
+    var s = 1;
+    if (rw > 0 && rh > 0) {
+      s = Math.min(rw / DW, rh / DH);
+    } else if (rw > 0) {
+      s = rw / DW;
+    } else if (rh > 0) {
+      s = rh / DH;
+    }
+    if (!isFinite(s) || s <= 0) s = 1;
+    viewport.style.width = (DW * s) + 'px';
+    viewport.style.height = (DH * s) + 'px';
+    shell.style.transform = 'scale(' + s + ')';
+  }
+
+  if (typeof ResizeObserver !== 'undefined') {
+    try {
+      new ResizeObserver(fit).observe(root);
+    } catch (e) {}
+  }
+  window.addEventListener('resize', fit);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit);
+  } else {
+    fit();
+  }
+})();
+</script>
+</body>
+</html>

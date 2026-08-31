@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coach Vin — Component Preview</title>
+  <title>VINSTOCK MUSIC</title>
+  <meta name="description" content="This is an engaging music marketplace with vinstock components">
+  
   <!-- Warm DNS/TLS for iframe font requests. Fonts still must load inside each iframe. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +25,12 @@
       color: var(--text);
       font-family: system-ui, sans-serif;
     }
+    header, footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    header.frame, footer.frame { margin: 16px auto; }
     main {
       max-width: 1200px;
       margin: 0 auto;
@@ -72,26 +80,52 @@
     .badge iframe { height: 360px; }
   </style>
 </head>
+
 <body>
+  <header class="frame logo">
+    <!-- Header -->
+    <iframe src="tab_white_adaptive.html" title="Site header" loading="eager"></iframe>
+  </header>
+
   <main>
-    <h1>Coach Vin components</h1>
-    <p>Each block loads its own HTML file. Do not paste Vincta srcdoc into a script tag — a nested <code>&lt;/script&gt;</code> will break the page.</p>
+    <div style="text-align:center;">        
+        <h1>VINSTOCK MUSIC</h1>
+         <p>Each block loads its own HTML file. Do not paste Vincta srcdoc into a script tag — a nested <code>&lt;/script&gt;</code> 
+        will break the page.</p>
+    </div>    
+
     <div class="stack">
       <section class="frame hero">
-        <h2>VINSTOCK MUSIC</h2>
-        <iframe src="components/hero_animate.html" title="Hero animation" loading="eager"></iframe>
+        <!-- <h2>HEROC</h2> -->
+        <iframe src="components/hero_animate.html" width="100%" title="Hero animation" loading="eager"></iframe>
       </section>
+
       <div class="row">
         <section class="frame logo">
-          <h2>Section </h2>
+          <!-- <h2>Logo</h2> -->
           <iframe src="Coach_Vin_Logo.html" title="Coach Vin logo" loading="lazy"></iframe>
         </section>
         <section class="frame badge">
-          <h2>Section</h2>
+          <!-- <h2>Enroll</h2> -->
           <iframe src="Enroll_Badge_glow.html" title="Enroll now badge" loading="lazy"></iframe>
         </section>
       </div>
+
+      <section class="frame hero">
+        <!-- <h2>Featured clip</h2> -->
+        <iframe src="components/hero_animate.html" title="Featured clip" loading="lazy"></iframe>
+      </section>
+
+      <section class="frame badge">
+        <!-- <h2>Call to action</h2> -->
+        <iframe src="Enroll_Badge_glow.html" title="Call to action" loading="lazy"></iframe>
+      </section>
     </div>
   </main>
+
+  <footer class="frame badge">
+    <!-- <h2>Footer</h2> -->
+    <iframe src="Enroll_Badge_glow.html" title="Site footer" loading="lazy"></iframe>
+  </footer>
 </body>
 </html>
