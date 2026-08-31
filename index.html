@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coach Vin — Component Preview</title>
+  <!-- Warm DNS/TLS for iframe font requests. Fonts still must load inside each iframe. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap">
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --panel: #141416;
+      --border: #2a2a2e;
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 650;
+      margin: 0 0 8px;
+    }
+    p {
+      color: var(--muted);
+      margin: 0 0 24px;
+      line-height: 1.5;
+    }
+    .stack { display: grid; gap: 20px; }
+    .row {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 800px) {
+      .row { grid-template-columns: 1fr; }
+    }
+    .frame {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .frame h2 {
+      margin: 0;
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      border: 0;
+      background: transparent;
+    }
+    .hero iframe { height: min(70vh, 560px); }
+    .logo iframe { height: 280px; }
+    .badge iframe { height: 360px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Coach Vin components</h1>
+    <p>Each block loads its own HTML file. Do not paste Vincta srcdoc into a script tag — a nested <code>&lt;/script&gt;</code> will break the page.</p>
+    <div class="stack">
+      <section class="frame hero">
+        <h2>Hero — HERO_ANIMATE.html</h2>
+        <iframe src="HERO_ANIMATE.html" title="Hero animation" loading="eager"></iframe>
+      </section>
+      <div class="row">
+        <section class="frame logo">
+          <h2>Logo — Coach_Vin_Logo.html</h2>
+          <iframe src="Coach_Vin_Logo.html" title="Coach Vin logo" loading="lazy"></iframe>
+        </section>
+        <section class="frame badge">
+          <h2>Badge — Enroll_Badge_glow.html</h2>
+          <iframe src="Enroll_Badge_glow.html" title="Enroll now badge" loading="lazy"></iframe>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
